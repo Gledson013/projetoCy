@@ -2,10 +2,10 @@
     "env": {
         "browser": true,
         "node": true,
-        "es2021": true
+        "es2021": true // es pe a versão do JS
     },
     "extends":[
-        "eslint:recommended", "plugin:cypress//recommended"
+        "eslint:recommended", "plugin:cypress//recommended" 
     ],
     "rules": {
         "camelcase": "error",
