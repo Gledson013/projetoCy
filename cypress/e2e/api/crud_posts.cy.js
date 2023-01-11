@@ -7,7 +7,7 @@ describe('CRUD - Posts', () => {
     let mensagem = 'Este post foi feito pelo Cypress'
     
     before(() => {
-        cy.login(Cypress.env('email'), Cypress.env('password'))  // DESTRUCTION - Elimina declarações de variável que ocupam memória. É explicado no momento 1:06:00 da aula 3 - CRUD dos Posts 
+        cy.login(Cypress.env('email'), Cypress.env('password'))  // Puxando esses dados de variável de ambiente// DESTRUCTION - Elimina declarações de variável que ocupam memória. É explicado no momento 1:06:00 da aula 3 - CRUD dos Posts 
     })
 
     it('cria um post', () => {
