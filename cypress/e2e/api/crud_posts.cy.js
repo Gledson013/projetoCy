@@ -7,7 +7,7 @@ describe('CRUD - Posts', () => {
     let mensagem = 'Este post foi feito pelo Cypress'
     
     before(() => {
-        cy.login(Cypress.env('email'), Cypress.env('password'))
+        cy.login(Cypress.env('email'), Cypress.env('password'))  // DESTRUCTION - Elimina declarações de variável que ocupam memória. É explicado no momento 1:06:00 da aula 3 - CRUD dos Posts 
     })
 
     it('cria um post', () => {
@@ -35,7 +35,7 @@ describe('CRUD - Posts', () => {
         }).then(({ status, body }) => {
             expect(status).to.eq(200)
             expect(body.text).to.eq(mensagem)
-            expect(body.likes).to.have.lengthOf(0)
+            expect(body.likes).to.have.lengthOf(0) // 1h13 da aula 4 - Variáveis de ambiente
 
             cy.testeContrato(testeContratoGETPosts, body)
         })
