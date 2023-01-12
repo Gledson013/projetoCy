@@ -3,9 +3,9 @@ export const definitionHelper = {
     definitions: {
         timestamp: {
             type: 'string',
-            examples: ['2022-11-29T19:1452'],
+            examples: ['2022-11-29T19:1452'], // Estudar a linguagem Regex
             pattern: ^(\\d{4}-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01]))T((2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])$)
         },
-         
+
     }
 }    
