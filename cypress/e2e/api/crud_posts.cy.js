@@ -1,8 +1,6 @@
 import { testeContratoPOSTPosts } from '../../fixtures/schema-POST-posts'
 import { testeContratoGETPosts } from '../../fixtures/contratos/schema-GET-posts'
-
 describe('CRUD - Posts', () => {
-
     let postId = ''
     let mensagem = 'Este post foi feito pelo Cypress'
     
@@ -10,8 +8,7 @@ describe('CRUD - Posts', () => {
         cy.login(Cypress.env('email'), Cypress.env('password'))  // Puxando esses dados de variável de ambiente// DESTRUCTION - Elimina declarações de variável que ocupam memória. É explicado no momento 1:06:00 da aula 3 - CRUD dos Posts 
     })
 
-    it('cria um post', () => {
-        
+    it('cria um post', () => {        
         cy.request({
             method: 'POST',
             url: '/api/posts',
