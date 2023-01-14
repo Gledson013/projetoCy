@@ -1,4 +1,4 @@
-describe('cabeçalho da página home', () => {
+describe('cabeçalho da página home', () => { // Aula 6 Cypress - 2h13 de aula o Pedro diz que aqui são tres formas de testar e que os tres fazem a mesma coisa porés o teste da linha 93 é o mais correto
     
     const validarMenu = (seletor, link, menu) => {
 
@@ -14,7 +14,7 @@ describe('cabeçalho da página home', () => {
             cy.visit('/')
         })
 
-        it('valida o cabeçalho', { tags: '@flaky' }, () => {
+        it.only('valida o cabeçalho', { tags: '@flaky' }, () => {
             
             // Conexão QA
             cy.getElement('navbar-conexaoQA')
@@ -90,7 +90,7 @@ describe('cabeçalho da página home', () => {
         })
 
         ;[
-            { seletor: 'navbar-conexaoQA', link: '/', menu: ' ConexãoQA' },
+            { seletor: 'navbar-conexaoQA', link: '/', menu: ' ConexãoQA' }, // A forma deste teste é a mais correta de usar, pois tem independencia dos seus testes, tem a manutenibilidade, não tem repetição
             { seletor: 'navbar-QAs', link: '/perfis', menu: 'QAs' },
             { seletor: 'navbar-posts', link: '/posts', menu: 'Posts' },
             { seletor: 'navbar-dashboard', link: '/dashboard', menu: ' Dashboard' },
