@@ -1,4 +1,4 @@
-import { testeContratoPOSTPosts } from '../../fixtures/schema-POST-posts'
+import { testeContratoPOSTPosts } from '../../fixtures/schema-POST-posts' // ui - usuario inteface
 import { testeContratoGETPosts } from '../../fixtures/contratos/schema-GET-posts'
 describe('CRUD - Posts', () => {
     let postId = ''
